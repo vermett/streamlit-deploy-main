@@ -24,9 +24,9 @@ df_final["target"] = y
 
 st.set_page_config(page_title="Heart Disease", page_icon=":heart:")
 
-st.title("Rizky Okka Heart Disease Prediction")
+st.title("Royef Fahrezal Heart Disease Prediction")
 st.write(
-    f"**_Model's Accuracy menggunakan KNN_** :  :green[**{accuracy}**]% (:green[Tinggi])"
+    f"**_Model's Accuracy menggunakan XGB_** :  :green[**{accuracy}**]% (:green[Tinggi])"
 )
 st.write("")
 
