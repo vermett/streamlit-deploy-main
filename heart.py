@@ -5,7 +5,7 @@ import time
 from imblearn.over_sampling import SMOTE
 from sklearn.metrics import accuracy_score
 
-df_clean = pd.read_csv("datasets/dfclean.csv")
+df_clean = pd.read_csv("dfclean.csv")
 X = df_clean.drop("target", axis=1)
 y = df_clean["target"]
 
@@ -13,7 +13,7 @@ smote = SMOTE(random_state=42)
 X, y = smote.fit_resample(X, y)
 
 
-model = pickle.load(open("models/xgb_model.pkl", "rb"))
+model = pickle.load(open("xgb_model.pkl", "rb"))
 
 y_pred = model.predict(X)
 accuracy = accuracy_score(y, y_pred)
